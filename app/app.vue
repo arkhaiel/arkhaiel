@@ -15,3 +15,10 @@
     </UMain>
   </UApp>
 </template>
+
+<script setup lang="ts">
+const route = useRoute()
+if (route.fullPath.includes('?fbclid')) {
+  await navigateTo(route.path)
+}
+</script>
