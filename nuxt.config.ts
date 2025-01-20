@@ -15,7 +15,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   css: ['~/assets/css/main.css'],
 
   content: {
@@ -43,7 +42,7 @@ export default defineNuxtConfig({
     },
     database: {
       type: 'd1',
-      binding: 'adev',
+      binding: 'DB',
     },
   },
 
@@ -52,6 +51,9 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-20',
+  hub: {
+    database: true,
+  },
 
   eslint: {
     config: {
