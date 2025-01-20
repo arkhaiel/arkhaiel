@@ -1,20 +1,6 @@
 <template>
-  <div>
-    <UHeader title="arkhaiel.dev">
-      <template #right>
-        <UContentSearchButton label="" />
-        <ClientOnly>
-          <UColorModeSwitch />
-        </ClientOnly>
-      </template>
-    </UHeader>
-    <UMain>
-      <div class="px-8">
-        <UPage>
-          <slot />
-        </UPage>
-      </div>
-    </UMain>
+  <UContainer>
+    <slot />
 
     <ClientOnly>
       <LazyUContentSearch
@@ -23,7 +9,7 @@
         :fuse="{ resultLimit: 42 }"
       />
     </ClientOnly>
-  </div>
+  </UContainer>
 </template>
 
 <script lang="ts" setup>

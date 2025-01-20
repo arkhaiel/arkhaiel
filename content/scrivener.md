@@ -1,14 +1,9 @@
 ---
-title: Scrivener
+title: Scrivener - Espaces réservés (Placeholders)
+description: Les espaces réservés permettent d'insérer des informations dans votre texte, même si ces informations ne sont pas encore connues ou sont susceptibles de changer. Voici une liste des espaces réservés disponibles dans Scrivener.
 ---
 
-## Espaces réservés (Placeholders)
-
-Les espaces réservés permettent d'insérer des informations dans votre texte, même si ces informations ne sont pas encore connues ou sont susceptibles de changer. Voici une liste des espaces réservés disponibles dans Scrivener.
-
----
-
-### Espaces réservés pour les modèles (Template Placeholders)
+## Modèles (Template Placeholders)
 
 | **Espace réservé**            | **Description**                                                                                  |
 |-------------------------------|--------------------------------------------------------------------------------------------------|
@@ -27,7 +22,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Espaces réservés pour l'écriture de scénario (Scriptwriting Placeholders)
+## Écriture de scénario (Scriptwriting Placeholders)
 
 | **Espace réservé**          | **Description**                                                                                                   |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -35,7 +30,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Espaces réservés pour la compilation (Compile Placeholders)
+## Compilation (Compile Placeholders)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +40,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### En-têtes et pieds de page (Headers and Footers)
+## En-têtes et pieds de page (Headers and Footers)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +49,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Commentaires, notes de bas de page et mise en page (Comments, Footnotes and Layout)
+## Commentaires, notes de bas de page et mise en page (Comments, Footnotes and Layout)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -64,7 +59,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Variables de document (Document Variables)
+## Variables de document (Document Variables)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -75,7 +70,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Date et heure actuelles (Current Date and Time)
+## Date et heure actuelles (Current Date and Time)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -85,7 +80,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Informations utilisateur et projet (User and Project Information)
+## Informations utilisateur et projet (User and Project Information)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -95,7 +90,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Statistiques (Statistics)
+## Statistiques (Statistics)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -104,7 +99,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Numérotation automatique (Auto-Numbering)
+## Numérotation automatique (Auto-Numbering)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -113,7 +108,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Images et texte (Images and Text)
+## Images et texte (Images and Text)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -122,7 +117,7 @@ Les espaces réservés permettent d'insérer des informations dans votre texte, 
 
 ---
 
-### Divers (Miscellaneous)
+## Divers (Miscellaneous)
 
 | **Espace réservé**          | **Description**                                                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------|

@@ -6,15 +6,16 @@ const { data: page } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <UPage>
+  <UPage
+    v-if="page"
+    :title="page.title"
+  >
+    <UPageHeader
+      :title="page.title"
+      :description="page.description"
+    />
     <UPageBody>
-      <article
-        v-if="page"
-        class="xl:px-16 mx-auto mb-8"
-      >
-        <ProseH1>{{ page.title }}</ProseH1>
-        <ContentRenderer :value="page" />
-      </article>
+      <ContentRenderer :value="page" />
     </UPageBody>
     <template #right>
       <UContentToc

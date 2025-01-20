@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxthub/core', '@nuxt/ui-pro', '@nuxt/content'],
+  modules: ['@nuxt/eslint', '@nuxthub/core', '@nuxt/ui-pro', '@nuxt/content', '@nuxtjs/seo'],
   devtools: { enabled: true },
 
   app: {
@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  site: {
+    url: 'https://arkhaiel.dev',
+    name: 'arkhaiel.dev',
+    // description: 'Welcome to my awesome site!',
+    defaultLocale: 'fr', // not needed if you have @nuxtjs/i18n installed
+  },
 
   content: {
     build: {
