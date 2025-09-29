@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxthub/core', '@nuxt/ui-pro', '@nuxt/content', '@nuxtjs/seo'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', "nitro-cloudflare-dev"],
   devtools: { enabled: true },
 
   app: {
@@ -22,8 +22,10 @@ export default defineNuxtConfig({
     // description: 'Welcome to my awesome site!',
     defaultLocale: 'fr', // not needed if you have @nuxtjs/i18n installed
   },
-
   content: {
+    experimental: {
+      sqliteConnector: 'native',
+    },
     build: {
       markdown: {
         remarkPlugins: {
@@ -46,19 +48,26 @@ export default defineNuxtConfig({
         },
       },
     },
-    database: {
-      type: 'd1',
-      binding: 'DB',
-    },
   },
-
-  future: {
-    compatibilityVersion: 4,
+  runtimeConfig: {
+    ghToken: process.env.GH_TOKEN,
   },
 
   compatibilityDate: '2025-01-20',
-  hub: {
-    database: true,
+  nitro: {
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    }
+  },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        types: ["@cloudflare/workers-types/2023-07-01"],
+      },
+    },
   },
 
   eslint: {
