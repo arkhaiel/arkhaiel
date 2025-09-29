@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', "nitro-cloudflare-dev"],
   devtools: { enabled: true },
-
+  ui: {
+    colorMode: false,
+    mdc: true,
+  },
   app: {
     head: {
       link: [
@@ -12,7 +15,15 @@ export default defineNuxtConfig({
           integrity: 'sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+',
           crossorigin: 'anonymous',
         },
+        { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
       ],
+      meta: [
+        { name: 'apple-mobile-web-app-title', content: 'arkhaiel' }
+      ]
     },
   },
   css: ['~/assets/css/main.css'],
