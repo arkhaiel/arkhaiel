@@ -8,5 +8,11 @@
       "database_id": "f701ec07-4a26-45bb-b45c-413d5567b71f",
       "remote": true
     }
+  ],
+  "routes": [
+    {
+      "pattern": "arkhaiel.dev",
+      "custom_domain": true
+    }
   ]
 }
