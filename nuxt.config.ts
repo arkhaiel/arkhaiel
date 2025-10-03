@@ -2,10 +2,6 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', "nitro-cloudflare-dev"],
   devtools: { enabled: true },
-  ui: {
-    colorMode: false,
-    mdc: true,
-  },
   app: {
     head: {
       link: [
@@ -60,16 +56,12 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig: {
-    ghToken: process.env.GH_TOKEN,
-  },
 
   compatibilityDate: '2025-01-20',
   nitro: {
-    preset: 'cloudflare_module',
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
+    prerender: { 
+      routes: ['/scrivener'],
+      autoSubfolderIndex: false 
     }
   },
 
