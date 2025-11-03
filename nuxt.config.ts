@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/seo', '@nuxt/content', "nitro-cloudflare-dev"],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/content', "@nuxtjs/i18n"],
   devtools: { enabled: true },
   app: {
     head: {
@@ -29,10 +29,22 @@ export default defineNuxtConfig({
     // description: 'Welcome to my awesome site!',
     defaultLocale: 'fr', // not needed if you have @nuxtjs/i18n installed
   },
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'fr', name: 'Français', file: 'fr.json' },
+    ],
+    defaultLocale: 'fr',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true,
+      redirectOn: 'root',
+      fallbackLocale: 'fr'
+    }
+  },
   content: {
-    experimental: {
-      sqliteConnector: 'native',
-    },
+    experimental: { sqliteConnector: 'native' },
     build: {
       markdown: {
         remarkPlugins: {
@@ -59,9 +71,9 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-20',
   nitro: {
-    prerender: { 
+    prerender: {
       routes: ['/scrivener'],
-      autoSubfolderIndex: false 
+      autoSubfolderIndex: false
     }
   },
 
@@ -72,7 +84,10 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  devServer: {
+    host: '0.0.0.0', // écoute sur toutes les interfaces
+    port: 3000,      // ou un autre port si tu veux
+  },
   eslint: {
     config: {
       stylistic: true,

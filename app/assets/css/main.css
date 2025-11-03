@@ -1,15 +1,85 @@
-@import "tailwindcss" theme(static);
+@import "tailwindcss";
 @import "@nuxt/ui";
+@source "../../../content/**/*.{md,yml}";
+
+
+/* 1) Tes tokens & animations -> OK dans @theme */
+@theme static {
+  /* Palette Arkha */
+  --color-arkha-50:  #EEF6FF;
+  --color-arkha-100: #D6EAFF;
+  --color-arkha-200: #ADD4FF;
+  --color-arkha-300: #7CB7FF;
+  --color-arkha-400: #4E93F5;
+  --color-arkha-500: #0057B7;
+  --color-arkha-600: #00489A;
+  --color-arkha-700: #003A7A;
+  --color-arkha-800: #002C5C;
+  --color-arkha-900: #001F41;
+  --color-arkha-950: #00142B;
+
+  /* Palette accent */
+  --color-accent-50:  #EFFAFA;
+  --color-accent-100: #DEF7F5;
+  --color-accent-200: #BEF4EF;
+  --color-accent-300: #8CF2EA;
+  --color-accent-400: #38FAEB;
+  --color-accent-500: #00D1C1;
+  --color-accent-600: #04A99C;
+  --color-accent-700: #07887E;
+  --color-accent-800: #086860;
+  --color-accent-900: #084944;
+  --color-accent-950: #083632;
+  --animate-wiggle: wiggle 1s ease-in-out;
+  @keyframes wiggle {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
 
 @theme {
---container-8xl: 100%;
+  --font-sans: 'Nunito', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 :root {
---ui-container: var(--container-8xl);
+  /* (facultatif) mappe les couleurs Nuxt UI vers ta palette */
+  /* Si tu veux que "primary" = arkha : */
+  --ui-color-primary-600: var(--color-arkha-600);
+  --ui-color-secondary-600: var(--color-accent-600);
+
+  /* Couleurs d’UI */
+  --ui-bg: var(--ui-color-neutral-50);
+  --ui-bg-muted: var(--ui-color-neutral-100);
+  --ui-bg-elevated: var(--ui-color-neutral-200);
+  --ui-bg-accented: var(--ui-color-neutral-300);
+
+  --ui-primary:  var(--ui-color-primary-600);
+  --ui-secondary: var(--ui-color-secondary-600);
+
+  /* Logo */
+  --logo-primary:   var(--ui-primary);
+  --logo-secondary: var(--ui-bg-elevated);
+  --logo-accent: #00D1C1;
+
+  /* Design global */
+  --ui-radius: 0.25rem;
 }
 
-.text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: var(--ui-color-neutral-800);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+
+  --ui-primary:   var(--ui-color-primary-300);
+  --ui-secondary: var(--ui-color-secondary-400);
+
+  --logo-primary:   var(--ui-primary);
+  --logo-secondary: var(--ui-bg-elevated);
+  --logo-accent:    #00D1C1;
 }
+
+
+/* Utilitaire global */
+body { @apply antialiased text-default bg-default scheme-light dark:scheme-dark; }

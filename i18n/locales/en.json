@@ -1,0 +1,21 @@
+{
+  "welcome": "Welcome",
+  "seo": {
+    "home": {
+      "title": "Arkhalabs",
+      "description": "Website creation, web applications, and training"
+    },
+    "about": {
+      "title": "About - Arkhalabs",
+      "description": "Discover Arkhalabs: expertise in web development, support, and innovation."
+    },
+    "services": {
+      "title": "Services - Arkhalabs",
+      "description": "Showcase websites, modern web applications, and tailored training."
+    },
+    "contact": {
+      "title": "Contact - Arkhalabs",
+      "description": "Get in touch with Arkhalabs to discuss your digital projects and training."
+    }
+  }
+}

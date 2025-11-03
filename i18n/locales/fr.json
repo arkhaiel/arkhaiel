@@ -1,0 +1,21 @@
+{
+  "welcome": "Bienvenue",
+  "seo": {
+    "home": {
+      "title": "Arkhalabs",
+      "description": "Création de sites, applications web, et formation"
+    },
+    "about": {
+      "title": "À propos - Arkhalabs",
+      "description": "Découvrez Arkhalabs : expertise en développement web, accompagnement et innovation."
+    },
+    "services": {
+      "title": "Services - Arkhalabs",
+      "description": "Sites vitrines, applications web modernes et formations adaptées à vos besoins."
+    },
+    "contact": {
+      "title": "Contact - Arkhalabs",
+      "description": "Contactez Arkhalabs pour discuter de vos projets numériques et formations."
+    }
+  }
+}

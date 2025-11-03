@@ -1,9 +1,20 @@
+<script setup lang="ts">
+const route = useRoute()
+if (route.fullPath.includes('?fbclid')) {
+  await navigateTo(route.path)
+}
+</script>
+
 <template>
   <UApp>
-    <UHeader title="arkhaiel.dev">
+    <UHeader :toggle="false">
+      <template #title>
+        <Logo class="w-8" />
+        <span class="hidden sm:inline">arkhaiel.dev</span>
+      </template>
       <template #right>
-        <UContentSearchButton label="" />
         <ClientOnly>
+          <I18nSwitch />
           <UColorModeSwitch />
         </ClientOnly>
       </template>
@@ -15,10 +26,3 @@
     </UMain>
   </UApp>
 </template>
-
-<script setup lang="ts">
-const route = useRoute()
-if (route.fullPath.includes('?fbclid')) {
-  await navigateTo(route.path)
-}
-</script>
